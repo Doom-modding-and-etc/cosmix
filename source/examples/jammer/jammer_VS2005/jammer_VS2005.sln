@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jammer_VS2005", "jammer_VS2005.vcproj", "{12B92F11-D6FD-4D95-83BE-E2264F7F6F9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12B92F11-D6FD-4D95-83BE-E2264F7F6F9B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{12B92F11-D6FD-4D95-83BE-E2264F7F6F9B}.Debug|Win32.Build.0 = Debug|Win32
+		{12B92F11-D6FD-4D95-83BE-E2264F7F6F9B}.Release|Win32.ActiveCfg = Release|Win32
+		{12B92F11-D6FD-4D95-83BE-E2264F7F6F9B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

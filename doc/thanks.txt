@@ -1,0 +1,14 @@
+Thanks for the following people, not in any particular order :
+
+
+- Lukasz for starting his PS2Doom port with broken sound which compelled me to write a sound engine
+
+- adresd for his PS2 ModPlayer v2.0 that shread some valuable light on how to make and use threads with ps2sdk
+
+- Lazy Bastard for his PS2Compiles pack where I found PS2 ModPlayer v2.0
+
+- EEUG for the valueble tips on thread switching
+
+- jbit for the talk and tips for using adpcm instead (who knows in the future?)
+
+- All the other guys who made the ps2dk

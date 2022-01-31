@@ -1,0 +1,6 @@
+To be done list
+================
+
+- Mixer_Init() should have some arguments
+
+- implement sample loop
