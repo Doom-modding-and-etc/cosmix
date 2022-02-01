@@ -1,7 +1,8 @@
 EE_BIN = jammerPS2.elf
 EE_OBJS = ../../cosmitoFileIO.o ../../mixer_thread.o ../../mixer.o jammer.o ../../sjpcm_rpc.o usbd.s usbhdfsd.s freesd.s SJPCM.s
-EE_LIBS = -lpad -ldebug
-#EE_CFLAGS = -g
+EE_INCS = -I$(PS2DEV)/isjpcm/include/ 
+EE_LDFLAGS = -L$(PS2SDK)/ee/lib/ -L$(PS2DEV)/isjpcm/lib
+EE_LIBS = -lpad -ldebug -lmixer -lsjpcm
 
 all: $(EE_BIN)
 

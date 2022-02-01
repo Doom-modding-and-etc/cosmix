@@ -1,9 +1,21 @@
-#include "mixer.h"
+/************************************************************************************************************************
+** CosMix                                                                                                              **
+** Copyright (c) 2009 - 2010 Pedro Duare(cosmito)                                                                      **
+** Copyright (c) 2022 - AndrÃ© Guillaume(Wolf3s)			                                                               **
+**                                                                                                                     **
+** CosMix Source Code is distributed in the hope that it will be useful,                                               ** 
+** but WITHOUT ANY WARRANTY; without even the implied warranty of                                                      **
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                                                        **
+** GNU General Public License for more details.									                                       **
+** Description: Mixer functions 														              												   **
+*************************************************************************************************************************/
 
-#include "mixer_thread.h"
+#include "include/mixer.h"
+#include "include/mixer_thread.h"
+
 #include <kernel.h>
-#include "sjpcm.h"
-
+#include <sjpcm.h>
+#include <stdlib.h>
 static sint16 *mixbuffer_L  /*[_MIXER_BUFSIZE]*/ __attribute__((aligned (64)));
 static sint16 *mixbuffer_R  /*[_MIXER_BUFSIZE]*/ __attribute__((aligned (64)));
 
@@ -256,7 +268,7 @@ void Mixer_Tick()
 			}
 
 			/// TBD : ogg stream mixed here
-			//  smixLeft += oggsleft[mi]   : mi - atenção ao mixer_period !
+			//  smixLeft += oggsleft[mi]   : mi - atenï¿½ï¿½o ao mixer_period !
 			//  smixRight += oggsright[mi]
 
 

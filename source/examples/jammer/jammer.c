@@ -7,13 +7,13 @@
 #include <libpad.h>
 #include <loadfile.h>
 #include <tamtypes.h>
-#include <graph_registers.h>
+#include <graph.h>
 
 // cosMix headers
-#include "../../sjpcm.h"
-#include "../../cosmitoFileIO.h"
-#include "../../mixer.h"
-#include "../../mixer_thread.h"
+#include <sjpcm.h>
+#include <mixer/wav.h>
+#include <mixer/mixer.h>
+#include <mixer/mixer_thread.h>
 
 extern unsigned char usbd[];
 extern unsigned int size_usbd;
@@ -876,9 +876,9 @@ void loadPadModules()
 // End Pad Functions from pad_example //
 //----------------------------------------------------------------------------//
 
-    ///
-    void GetElfFilename(const char *argv0_probe, char* deviceName, char* fullPath, char* elfFilename)
-    {
+///
+void GetElfFilename(const char *argv0_probe, char* deviceName, char* fullPath, char* elfFilename)
+{
         int i;
 
         int lenght = strlen(argv0_probe);
@@ -927,4 +927,4 @@ void loadPadModules()
             memcpy(elfFilename, argv0_probe + doispontosIndex + 1, lenght - doispontosIndex);
         else
             memcpy(elfFilename, argv0_probe + slashIndex + 1, lenght - slashIndex);
-    }
+}

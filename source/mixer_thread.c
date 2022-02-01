@@ -1,12 +1,22 @@
-/// Based on modplayer_thread.c
+/************************************************************************************************************************
+** CosMix                                                                                                              **
+** Copyright (c) 2009 - 2010 Pedro Duare(cosmito)                                                                      **
+** Copyright (c) 2022 - André Guillaume(Wolf3s)			                                                               **
+**                                                                                                                     **
+** CosMix Source Code is distributed in the hope that it will be useful,                                               ** 
+** but WITHOUT ANY WARRANTY; without even the implied warranty of                                                      **
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                                                        **
+** GNU General Public License for more details.									                                       **
+** Description: Mixer Thread functions														              												   **
+*************************************************************************************************************************/
 
 #include <tamtypes.h>
 #include <ps2lib_err.h>
 #include <kernel.h>
 #include <sifrpc.h>
 
-#include "mixer_thread.h"
-#include "mixer.h"
+#include "include/mixer_thread.h"
+#include "include/mixer.h"
 
 #define THREAD_STACK_SIZE	(8 * 1024)
 

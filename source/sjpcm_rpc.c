@@ -21,7 +21,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stdio.h>
-#include "sjpcm.h"
+#include <sjpcm.h>
 
 #define SJPCM_CALLBACK 0x12
 

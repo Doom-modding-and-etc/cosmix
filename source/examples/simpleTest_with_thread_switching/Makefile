@@ -1,11 +1,8 @@
 EE_BIN = test.elf
 EE_OBJS = ../../cosmitoFileIO.o ../../mixer_thread.o ../../mixer.o test6.o ../../sjpcm_rpc.o #isjpcm.s
-#EE_CFLAGS = -g
-#EE_INCS  = -I$(PS2DEV)/isjpcm/include
-#EE_INCS  = -I$(PS2DEV)/isjpcm/ee/src
-
-# Link with libs
-#EE_LIBS = -L$(PS2DEV)/isjpcm/lib -lsjpcm
+EE_INCS = -I$(PS2DEV)/isjpcm/include/ 
+EE_LDFLAGS = -L$(PS2SDK)/ee/lib/ -L$(PS2SDK)/ee/lib/ -L$(PS2DEV)/isjpcm/lib
+EE_LIBS = -lpad -ldebug -lmixer -lsjpcm
 
 all: $(EE_BIN)
 

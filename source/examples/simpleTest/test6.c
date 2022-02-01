@@ -15,14 +15,14 @@
 #include <sifrpc.h>
 #include <loadfile.h>
 #include <tamtypes.h>
-#include "..\..\sjpcm.h"
+#include <sjpcm.h>
 
-#include <graph_registers.h>
+#include <graph.h>
 
-#include "..\..\cosmitoFileIO.h"
+#include <mixer/wav.h>
 
-#include "..\..\mixer.h"
-#include "..\..\mixer_thread.h"
+#include <mixer/mixer.h>
+#include <mixer/mixer_thread.h>
 
 extern unsigned char isjpcm[];
 extern unsigned int size_isjpcm;
