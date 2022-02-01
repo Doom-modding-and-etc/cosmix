@@ -7,7 +7,7 @@
 ** but WITHOUT ANY WARRANTY; without even the implied warranty of                                                      **
 ** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                                                        **
 ** GNU General Public License for more details.									                                       **
-** Description: Mixer functions 														              												   **
+** Description: Mixer functions 														              				   **
 *************************************************************************************************************************/
 
 #include "include/mixer.h"
@@ -16,6 +16,7 @@
 #include <kernel.h>
 #include <sjpcm.h>
 #include <stdlib.h>
+
 static sint16 *mixbuffer_L  /*[_MIXER_BUFSIZE]*/ __attribute__((aligned (64)));
 static sint16 *mixbuffer_R  /*[_MIXER_BUFSIZE]*/ __attribute__((aligned (64)));
 
@@ -107,7 +108,7 @@ int PlaySampleAtChannel(int selected_channel, sint16 * sampleAddress, int sample
 int  StopSampleAtChannel(int chan)
 {
     // return if invalid chan number
-    if (chan < 0 || chan >= _MIXER_MAXCHANNELS)
+    if(chan < 0 || chan >= _MIXER_MAXCHANNELS)
         return -1;
 
         channels[chan].active = 0;

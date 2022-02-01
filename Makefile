@@ -4,11 +4,11 @@ EE_LIB = libmixer.a
 
 BIN2S = $(PS2SDK)/bin/bin2s
 
-EE_INCS = -I$(GSKIT)/include -I$(GSKIT)/ee/dma/include -I$(GSKIT)/ee/gs/include -I$(GSKIT)/ee/toolkit/include -I$(PS2SDK)/ports/include/SDL -I$(PS2SDK)/ports/include -I$(PS2DEV)/isjpcm/include/ 
+EE_INCS = -I$(PS2DEV)/isjpcm/include/ 
 
 EE_CFLAGS += -Wall -Os -I../include -I../include/
 
-EE_LDFLAGS = -L$(PS2DEV)/gsKit/lib -L$(PS2DEV)/isjpcm/lib/ -L$(PS2SDK)/iop/lib/ -L$(PS2SDK)/ee/lib/
+EE_LDFLAGS = -L$(PS2DEV)/isjpcm/lib/ -L$(PS2SDK)/ee/lib/
 
 EE_LIBS = -lsjpcm 
 
@@ -27,12 +27,6 @@ freesd.s: $(PS2SDK)/iop/irx/freesd.irx
 	 
 isjpcm.s: $(PS2DEV)/isjpcm/bin/isjpcm.irx
 	$(BIN2S) $< $@ IRX/isjpcm_irx
-
-run:
-	ps2client execee host:$(EE_BIN)
-
-reset:
-	ps2client reset
 
 jammer:	
 	$(MAKE) -C source/examples/jammer all

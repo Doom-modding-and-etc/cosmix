@@ -27,40 +27,40 @@ See also the examples section.
 
 SjPCM related (you must call these first):
 
-    > SjPCM_Init(i)		// 1 = sync mode, 0 async mode
+    SjPCM_Init(i)	// 1 = sync mode, 0 async mode
 
-    > SjPCM_Setvol(x);	// 0x3fff is full vol
+    SjPCM_Setvol(x);	// 0x3fff is full vol
 
-    > any other SjPCM function you may want
+    any other SjPCM function you may want
 
 cosMix init:
 
-    > void Mixer_Init()				// Init mixer channels, autodetect PAL/NTSC and sets buffer
+    void Mixer_Init()				// Init mixer channels, autodetect PAL/NTSC and sets buffer
                                  // size accordingly, creates and starts mixer thread and
 											// associated VBlank handler
 
-    > void Mixer_Terminate()		// Release resources used, optional (not proper tested)
+    void Mixer_Terminate()		// Release resources used, optional (not proper tested)
 
 Section A
 ---------
 
-    >  void PlaySample(sint16 * sampleAddress, int sampleLenght, int vol, int stereo)
+    void PlaySample(sint16 * sampleAddress, int sampleLenght, int vol, int stereo)
 	// Instruct mixer to play stereo or mono 16-Bit Stereo PCM (PC Windows WAV format).
 	// sampleAddress must point to sample previously loaded in memory, sampleLenght is the
 	// lenght in bytes, vol ranges from 0 to 128. Stereo is used if stereo = 1, mono if = 0.
 	// Channel selection is automatic.
 
-    >	int  PlaySampleAtChannel(int selected_channel, sint16 * sampleAddress, int sampleLenght, int vol, int stereo);
+    int  PlaySampleAtChannel(int selected_channel, sint16 * sampleAddress, int sampleLenght, int vol, int stereo);
 	// Same as above but you can specify a particular channel to use. 'selected_channel' should take a value
 	// from 0 to _MIXER_MAXCHANNELS.
 
-    >	int  StopSampleAtChannel(int selected_channel);
+    int  StopSampleAtChannel(int selected_channel);
 	// Stop sample at channel 'selected_channel'.
 
-    >	int  IsPlayingAtChannel(int chan);
+    int  IsPlayingAtChannel(int chan);
 	// Returs 1 if a sample is playing at channel 'chan' and 0 otherwise.
 
-    >	int  IsPlaying();
+    int  IsPlaying();
     // Returns the number of channels currently playing (0 or more).
 
 ## WAV sample format reference
@@ -87,23 +87,17 @@ Section A
 
     Expect the LOW HIGH order.
 
-
 To be done list
-================
+===============
 
 - Mixer_Init() should have some arguments
-
 - implement sample loop
+
 ## Thanks for the following people, not in any particular order :
 
 - Lukasz for starting his PS2Doom port with broken sound which compelled me to write a sound engine
-
 - adresd for his PS2 ModPlayer v2.0 that shread some valuable light on how to make and use threads with ps2sdk
-
 - Lazy Bastard for his PS2Compiles pack where I found PS2 ModPlayer v2.0
-
 - EEUG for the valueble tips on thread switching
-
 - jbit for the talk and tips for using adpcm instead (who knows in the future?)
-
-- All the other guys who made the ps2dk
+- All the other guys who made the ps2sdk

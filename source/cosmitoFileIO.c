@@ -11,7 +11,7 @@
 *************************************************************************************************************************/
 
 #include "include/wav.h"
-
+#include <stdio.h>
 // Note: This calls fseek, so watch out...
 int GetFilesize(FILE * fd)
 {
