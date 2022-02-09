@@ -1,13 +1,13 @@
 /************************************************************************************************************************
 ** CosMix                                                                                                              **
-** Copyright (c) 2009 - 2010 Pedro Duare(cosmito)                                                                      **
+** Copyright (c) 2009 - 2010 Pedro Duarte(cosmito)                                                                     **
 ** Copyright (c) 2022 - André Guillaume(Wolf3s)			                                                               **
 **                                                                                                                     **
 ** CosMix Source Code is distributed in the hope that it will be useful,                                               ** 
 ** but WITHOUT ANY WARRANTY; without even the implied warranty of                                                      **
 ** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                                                        **
 ** GNU General Public License for more details.									                                       **
-** Description: Mixer Thread functions														              												   **
+** Description: Mixer Thread functions		                                                                           **
 *************************************************************************************************************************/
 
 #ifndef _MIXER_THREAD_H
