@@ -3,4 +3,6 @@ To be done list
 
 - Mixer_Init() should have some arguments
 
-- implement sample loop
+- implement loop sample
+
+- implement more audio support

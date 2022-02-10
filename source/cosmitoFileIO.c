@@ -41,14 +41,20 @@ int GetWAVsize(char *filename)
         return 0;
 }
 
-/// TBD
-//// Dynamically mallocs a signed char buffer and loads from file into it. res < 0 means error.
-//FILE AllocLoad_scharbuffer(char *filename, int optionalBufSize, int *res)
-//{
-//	FILE *fd;
-//	int size;
-//
-//
-//	if (optionalBufSize == 0)
-//
-//}
+/*******************************************
+********************************************
+
+TBD:
+  Dynamically mallocs a signed char buffer and loads from file into it. res < 0 means error.
+ FILE AllocLoad_scharbuffer(char *filename, int optionalBufSize, int *res)
+ {
+	FILE *fd;
+	int size;
+
+
+	if (optionalBufSize == 0)
+
+ }
+
+********************************************
+*******************************************/
